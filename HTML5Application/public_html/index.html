@@ -8,13 +8,12 @@
 
 <body>
 
-<div data-ng-app="" data-ng-init="quantity=0;price=0">
-
-Quantity: <input type="number"	data-ng-model="quantity">
-Costs:    <input type="number" data-ng-model="price">
-
-Total in euro: &euro; {{quantity * price}}
-
+<div data-ng-app="" data-ng-init="names=['First','Second','Third']">
+  <ul>
+    <li data-ng-repeat="i in names">
+      {{ i }}
+    </li>
+  </ul>
 </div>
 
 </body>
