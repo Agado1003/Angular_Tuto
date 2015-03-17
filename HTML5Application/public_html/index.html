@@ -8,22 +8,11 @@
 
 <body>
 
-<div data-ng-app="myApp" data-ng-controller="myCtrl">
+<div data-ng-app="" data-ng-init="firstName='John';lastName='Doe'">
 
-First Name: <input type="text" data-ng-model="firstName"><br/>
-Last Name: <input type="text" data-ng-model="lastName"><br/>
-<br/>
-Full Name: {{firstName + " " + lastName}}
+<p>The name is <span data-ng-bind="firstName + ' ' + lastName"></span></p>
 
 </div>
-    
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.firstName= "John";
-    $scope.lastName= "Doe";
-});
-</script>
 
 </body>
 </html>
