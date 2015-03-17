@@ -10,7 +10,8 @@
 
 <div data-ng-app="" data-ng-init="points=[1,15,19,2,40]">
 
-<p>The third result is {{ points[2] }}</p>
+    <p>The third result is <span data-ng-bind="points[2]"></span></p>
+    <p>The array's size is <span data-ng-bind="points.length"></span></p>
 
 </div>
 
