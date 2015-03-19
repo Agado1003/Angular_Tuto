@@ -8,10 +8,13 @@
 
 <body>
 
-<div data-ng-app="myApp" data-ng-controller="productCtrl">
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
 
-<p>The name is {{Product.Name | uppercase}}</p>
-<p>The price is {{Product.Price | currency}}</p>
+<ul>
+  <li ng-repeat="x in Countries | orderBy:'Name'">
+    {{ 'Country : ' + x.Name + ', Population : ' + x.Population }}
+  </li>
+</ul>
 
 </div>
     
