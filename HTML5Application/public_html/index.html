@@ -9,9 +9,11 @@
 <body>
 
 <div data-ng-app="myApp" data-ng-controller="myCtrl">
+    
+<p>Filter : <input type="text" ng-model="myFilter"></p>
 
 <ul>
-  <li data-ng-repeat="x in Countries | orderBy:'Name'">
+  <li data-ng-repeat="x in Countries | filter:myFilter | orderBy:'Name'">
     {{ 'Country : ' + x.Name + ', Population : ' + x.Population }}
   </li>
 </ul>
