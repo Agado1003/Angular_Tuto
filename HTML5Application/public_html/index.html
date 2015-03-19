@@ -11,7 +11,7 @@
 <div data-ng-app="myApp" data-ng-controller="myCtrl">
 
 <ul>
-  <li ng-repeat="x in Countries | orderBy:'Name'">
+  <li data-ng-repeat="x in Countries | orderBy:'Name'">
     {{ 'Country : ' + x.Name + ', Population : ' + x.Population }}
   </li>
 </ul>
