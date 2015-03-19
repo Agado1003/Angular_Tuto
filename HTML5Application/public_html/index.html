@@ -8,12 +8,14 @@
 
 <body>
 
-<div data-ng-app="" data-ng-init="Product={Name:'Potato',Price:5.90}">
+<div data-ng-app="myApp" data-ng-controller="productCtrl">
 
-<p>The name is {{ Product.Name | uppercase }}</p>
-<p>The price is {{ Product.Price | currency }}</p>
+<p>The name is {{Product.Name | uppercase}}</p>
+<p>The price is {{Product.Price | currency}}</p>
 
 </div>
+    
+    <script src="Controller.js"></script>
 
 </body>
 </html>
