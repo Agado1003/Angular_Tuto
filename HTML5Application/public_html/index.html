@@ -8,17 +8,12 @@
 
 <body>
 
-<div data-ng-app="myApp" data-ng-controller="namesCtrl">
+<div data-ng-app="" data-ng-init="Product={Name:'Potato',Price:5.90}">
 
-<ul>
-  <li data-ng-repeat="x in names">
-    {{ x.name + ', ' + x.country }}
-  </li>
-</ul>
+<p>The name is {{ Product.Name | uppercase }}</p>
+<p>The price is {{ Product.Price | currency }}</p>
 
 </div>
-
-<script src="personController.js"></script>
 
 </body>
 </html>
