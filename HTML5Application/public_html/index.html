@@ -8,25 +8,17 @@
 
 <body>
 
-<div data-ng-app="myApp" data-ng-controller="personCtrl">
+<div data-ng-app="myApp" data-ng-controller="namesCtrl">
 
-First Name: <input type="text" data-ng-model="firstName"><br>
-Last Name: <input type="text" data-ng-model="lastName"><br>
-<br>
-Full Name: {{fullName()}}
+<ul>
+  <li data-ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
 
 </div>
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('personCtrl', function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-    $scope.fullName = function() {
-        return $scope.firstName + " " + $scope.lastName;
-    }
-});
-</script>
+<script src="personController.js"></script>
 
 </body>
 </html>
