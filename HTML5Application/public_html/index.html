@@ -10,8 +10,10 @@
 
 <div data-ng-app="myApp" data-ng-controller="customersCtrl"> 
 
+<p>Filter : <input type="text" data-ng-model="myFilter"></p>
+
 <table border="1">
-  <tr data-ng-repeat="x in names">
+  <tr data-ng-repeat="x in names | filter:myFilter | orderBy:'Name'">
     <td>{{ x.Name }}</td>
     <td>{{ x.Country }}</td>
   </tr>
