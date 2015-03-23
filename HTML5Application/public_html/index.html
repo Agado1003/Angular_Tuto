@@ -23,10 +23,8 @@ table tr:nth-child(even) {
 
 <div data-ng-app="myApp" data-ng-controller="customersCtrl"> 
 
-<p>Filter : <input type="text" data-ng-model="myFilter"></p>
-
-<table border="1">
-  <tr data-ng-repeat="x in names | filter:myFilter | orderBy:'Name'">
+<table>
+  <tr data-ng-repeat="x in names">
     <td>{{ x.Name }}</td>
     <td>{{ x.Country }}</td>
   </tr>
@@ -37,8 +35,8 @@ table tr:nth-child(even) {
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
-    $http.get("http://www.w3schools.com/website/Customers_JSON.php")
-    .success(function(response) {$scope.names = response;});
+    $http.get("http://www.w3schools.com/website/Customers_mysql.php")
+    .success(function (response) {$scope.names = response;});
 });
 </script>
 
