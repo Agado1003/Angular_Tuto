@@ -8,19 +8,23 @@
 
 <body>
 
-<div data-ng-app="myApp" data-ng-controller="myCtrl">
-    
-<p>Filter : <input type="text" data-ng-model="myFilter"></p>
+<div data-ng-app="myApp" data-ng-controller="customersCtrl"> 
 
 <ul>
-  <li data-ng-repeat="x in Countries | filter:myFilter | orderBy:'Name'">
-    {{ 'Country : ' + x.Name + ', Population : ' + x.Population }}
+  <li data-ng-repeat="x in names">
+    {{ x.Name + ', ' + x.Country }}
   </li>
 </ul>
 
 </div>
-    
-    <script src="Controller.js"></script>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://www.w3schools.com/website/Customers_JSON.php")
+    .success(function(response) {$scope.names = response;});
+});
+</script>
 
 </body>
 </html>
