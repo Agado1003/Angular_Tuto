@@ -8,16 +8,10 @@
 
 <body>
 
-<div data-ng-app="">
-
-<p>
-<button data-ng-disabled="mySwitch">Click Me!</button>
-</p>
-
-<p>
-<input type="checkbox" data-ng-model="mySwitch">Button
-</p>
-
+<div data-ng-app=""  data-ng-init="count=1">
+    <button data-ng-click="count=count+1">Click me!</button>
+    <p>{{ count }}</p>
+    
 </div>
 
 </body>
